@@ -1,13 +1,32 @@
-body {
+/* reset */
+h1,
+p,
+input,
+body,
+ul,
+li,
+button {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input,
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Nekst-Black";
+  font-style: normal;
+  color: #575757;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
 }

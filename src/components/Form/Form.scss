@@ -1,0 +1,122 @@
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 1px;
+  background-color: #ff9514;
+}
+input[type="range"]::-webkit-slider-thumb {
+  background: #ff9514;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #9a905d;
+}
+
+.form__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.form__label {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #575757;
+}
+
+.form__input {
+  box-sizing: border-box;
+  margin-top: 24px;
+  background: #f3f3f4;
+  border-radius: 16px;
+  padding: 16px 24px;
+  position: relative;
+  &_initial {
+    padding: 7px 7px 7px 24px;
+  }
+}
+
+.form__range {
+  position: absolute;
+  left: 24px;
+  bottom: 0;
+  max-width: calc(100% - 48px);
+}
+
+.form__text-wrpr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__text {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  &_initial {
+    font-size: 20px;
+    line-height: 120%;
+    padding: 15px 17px;
+    background: #ebebec;
+    border-radius: 16px;
+  }
+}
+
+.form__totals-wrpr {
+  display: grid;
+  grid-template-columns: 2.02fr 0.98fr;
+  gap: 32px;
+  margin-top: 44px;
+}
+
+.form__totals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.form__total {
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 90%;
+  color: #575757;
+  padding-top: 8px;
+}
+
+.form__submit {
+  background: #ff9514;
+  border-radius: 40px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+  padding: 14px 0 18px 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #111111;
+  }
+  &:disabled {
+    background-color: #ff951466;
+    cursor: default;
+  }
+}
