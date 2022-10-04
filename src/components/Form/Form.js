@@ -79,6 +79,7 @@ const Form = () => {
               min={1000000}
               max={6000000}
               value={carPrice}
+              disabled={isLoading}
               onChange={(e) => {
                 setCarPrice(e.target.value);
               }}
@@ -102,6 +103,7 @@ const Form = () => {
               min={10}
               max={60}
               value={initialFee}
+              disabled={isLoading}
               onChange={(e) => {
                 setInitialFee(e.target.value);
               }}
@@ -123,6 +125,7 @@ const Form = () => {
               min={1}
               max={60}
               value={monthsCount}
+              disabled={isLoading}
               onChange={(e) => {
                 setMonthsCount(e.target.value);
               }}

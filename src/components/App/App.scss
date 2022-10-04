@@ -2,6 +2,7 @@
   padding: 0 47px;
   width: 100vw;
   box-sizing: border-box;
+  max-width: 1440px;
 }
 
 .app__title {
@@ -9,4 +10,26 @@
   font-size: 54px;
   line-height: 90%;
   color: #111111;
+}
+
+@media screen and (max-width: 1224px) {
+  .app {
+    padding: 100px 47px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .app {
+    padding: 64px 36px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app {
+    padding: 44px 20px;
+  }
+
+  .app__title {
+    font-size: 34px;
+  }
 }

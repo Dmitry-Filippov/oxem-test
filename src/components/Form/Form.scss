@@ -124,3 +124,68 @@ input[type="range"]::-ms-fill-upper {
     cursor: default;
   }
 }
+
+@media screen and (max-width: 1224px) {
+  .form__inputs {
+    grid-template-columns: 1fr;
+    margin-top: 44px;
+  }
+
+  .form__totals-wrpr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__submit {
+    align-self: flex-start;
+    width: 345px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form__inputs {
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .form__input {
+    margin-top: 8px;
+    padding: 20px;
+    &_initial {
+      padding: 6px 6px 6px 20px;
+    }
+  }
+
+  .form__text {
+    font-size: 22px;
+    line-height: 20px;
+  }
+
+  .form__label {
+    font-size: 14px;
+    line-height: 136%;
+  }
+
+  .form__totals-wrpr {
+    margin-top: 16px;
+  }
+
+  .form__totals {
+    grid-template-columns: 1fr;
+    gap: 29px;
+  }
+
+  .form__total {
+    font-size: 22px;
+    line-height: 20px;
+    padding-top: 2px;
+  }
+
+  .form__submit {
+    font-size: 22px;
+    line-height: 20px;
+    padding: 18px 0 22px 0;
+    align-self: auto;
+    width: auto;
+  }
+}
