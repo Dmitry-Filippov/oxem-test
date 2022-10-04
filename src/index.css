@@ -22,6 +22,18 @@ ul {
   list-style: none;
 }
 
+@font-face {
+  font-family: "Nekst-Black";
+  src: url("./fonts/Nekst/Nekst-Black.woff") format("woff"),
+    url("./fonts/Nekst/Nekst-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy/Gilroy-Regular.woff") format("woff"),
+    url("./fonts/Gilroy/Gilroy-Regular.woff2") format("woff2");
+}
+
 body {
   font-family: "Nekst-Black";
   font-style: normal;

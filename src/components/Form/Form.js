@@ -90,7 +90,9 @@ const Form = () => {
           <label className="form__label">Первоначальный взнос</label>
           <div className="form__input form__input_initial">
             <div className="form__text-wrpr">
-              <p className="form__text">{beautifyPrice(initialPrice)}</p>
+              <p className="form__text">
+                {beautifyPrice(initialPrice)} &#8381;
+              </p>
               <p className="form__text form__text_initial">{`${initialFee}%`}</p>
             </div>
             {/* <div className="range-wrapper"> */}
@@ -134,13 +136,13 @@ const Form = () => {
           <li>
             <p className="form__label">Сумма договора лизинга</p>
             <p className="form__total">
-              {beautifyPrice(Math.round(totalPay))}&#8381;
+              {beautifyPrice(Math.round(totalPay))} <span> &#8381;</span>
             </p>
           </li>
           <li>
             <p className="form__label">Ежемесячный платеж от</p>
             <p className="form__total">
-              {beautifyPrice(Math.round(monthPay))}&#8381;
+              {beautifyPrice(Math.round(monthPay))} <span> &#8381;</span>
             </p>
           </li>
         </ul>
