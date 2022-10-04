@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { sendData } from "../../api/api";
 import "./Form.scss";
 
 const Form = () => {
@@ -17,6 +18,7 @@ const Form = () => {
   const [totalPay, setTotalPay] = useState(
     monthsCount * monthPay + initialPrice
   );
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setInitiatPrice(Math.round(carPrice * (initialFee / 100)));
@@ -43,6 +45,23 @@ const Form = () => {
       className="form"
       onSubmit={(e) => {
         e.preventDefault();
+        setIsLoading(true);
+        sendData({
+          carPrice: carPrice,
+          initialPaymentInPercent: initialFee,
+          initialPayment: initialPrice,
+          leasingDuration: monthsCount,
+          totalPrice: totalPay,
+          monthPay: monthPay,
+        })
+          .then((res) => {
+            console.log(res);
+            setIsLoading(false);
+          })
+          .catch((err) => {
+            console.log(`Ошибка! ${err}`);
+            setIsLoading(false);
+          });
       }}
     >
       <ul className="form__inputs">
@@ -125,7 +144,7 @@ const Form = () => {
             </p>
           </li>
         </ul>
-        <button className="form__submit" type="submit">
+        <button className="form__submit" type="submit" disabled={isLoading}>
           Оставить заявку
         </button>
       </div>
