@@ -16,6 +16,8 @@ button {
   border: none;
   color: inherit;
   outline: none;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 ul {

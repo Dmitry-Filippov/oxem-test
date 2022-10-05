@@ -67,6 +67,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .form__text {
+  max-width: 300px;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -76,6 +77,14 @@ input[type="range"]::-ms-fill-upper {
     padding: 15px 17px;
     background: #ebebec;
     border-radius: 16px;
+    display: flex;
+    &-input {
+      color: inherit;
+      font-size: 20px;
+      line-height: 120%;
+      font-weight: 900;
+      width: 30px;
+    }
   }
 }
 
