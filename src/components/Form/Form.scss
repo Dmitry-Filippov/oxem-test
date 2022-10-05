@@ -43,6 +43,12 @@ input[type="range"]::-ms-fill-upper {
 
 .form__input {
   box-sizing: border-box;
+  border: 2px solid #f3f3f4;
+  &:focus-within {
+    background: none;
+    border: 2px solid #f3f3f4;
+  }
+  box-sizing: border-box;
   margin-top: 24px;
   background: #f3f3f4;
   border-radius: 16px;
@@ -50,6 +56,9 @@ input[type="range"]::-ms-fill-upper {
   position: relative;
   &_initial {
     padding: 7px 7px 7px 24px;
+  }
+  &_disabled {
+    opacity: .5;
   }
 }
 
@@ -85,6 +94,9 @@ input[type="range"]::-ms-fill-upper {
       font-weight: 900;
       width: 30px;
     }
+  }
+  &:disabled {
+    opacity: 1;
   }
 }
 

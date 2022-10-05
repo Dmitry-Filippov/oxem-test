@@ -82,7 +82,9 @@ const Form = () => {
       <ul className="form__inputs">
         <li className="form__input-item">
           <label className="form__label">Стоимость автомобиля</label>
-          <div className="form__input">
+          <div
+            className={`form__input ${isLoading ? "form__input_disabled" : ""}`}
+          >
             <div className="form__text-wrpr">
               <input
                 disabled={isLoading}
@@ -126,7 +128,11 @@ const Form = () => {
         </li>
         <li className="form__input-item">
           <label className="form__label">Первоначальный взнос</label>
-          <div className="form__input form__input_initial">
+          <div
+            className={`form__input form__input_initial ${
+              isLoading ? "form__input_disabled" : ""
+            }`}
+          >
             <div className="form__text-wrpr">
               <p className="form__text">
                 {beautifyPrice(initialPrice)} &#8381;
@@ -175,7 +181,9 @@ const Form = () => {
         </li>
         <li className="form__input-item">
           <label className="form__label">Срок лизинга</label>
-          <div className="form__input">
+          <div
+            className={`form__input ${isLoading ? "form__input_disabled" : ""}`}
+          >
             <div className="form__text-wrpr">
               <input
                 disabled={isLoading}
