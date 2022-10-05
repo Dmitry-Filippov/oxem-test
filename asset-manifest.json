@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/oxem-test/static/css/main.720c2604.css",
+    "main.js": "/oxem-test/static/js/main.7e323fa7.js",
+    "static/media/Nekst-Black.woff": "/oxem-test/static/media/Nekst-Black.f0e2921efcf1112b1749.woff",
+    "static/media/Nekst-Black.woff2": "/oxem-test/static/media/Nekst-Black.44814bfd3ba4a266cf1d.woff2",
+    "static/media/Gilroy-Regular.woff": "/oxem-test/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
+    "static/media/Gilroy-Regular.woff2": "/oxem-test/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
+    "index.html": "/oxem-test/index.html",
+    "main.720c2604.css.map": "/oxem-test/static/css/main.720c2604.css.map",
+    "main.7e323fa7.js.map": "/oxem-test/static/js/main.7e323fa7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.720c2604.css",
+    "static/js/main.7e323fa7.js"
+  ]
+}
