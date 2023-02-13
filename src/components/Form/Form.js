@@ -4,9 +4,9 @@ import "./Form.scss";
 
 const Form = () => {
   const rate = 0.035;
-  const [carPrice, setCarPrice] = useState(2600000);
+  const [carPrice, setCarPrice] = useState(3300000);
   const [carPriceInput, setCarPriceInput] = useState(carPrice);
-  const [initialFee, setInitialFee] = useState(15);
+  const [initialFee, setInitialFee] = useState(13);
   const [initialFeeInput, setInitialFeeInput] = useState(initialFee);
   const [initialPrice, setInitiatPrice] = useState(
     Math.round(carPrice * (initialFee / 100))
@@ -60,23 +60,38 @@ const Form = () => {
       className="form"
       onSubmit={(e) => {
         e.preventDefault();
-        setIsLoading(true);
-        sendData({
+        const data = {
           carPrice: carPrice,
           initialPaymentInPercent: initialFee,
           initialPayment: initialPrice,
           leasingDuration: monthsCount,
           totalPrice: totalPay,
           monthPay: monthPay,
+        };
+        setIsLoading(true);
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve();
+          }, 300);
         })
-          .then((res) => {
-            console.log(res);
-            setIsLoading(false);
+          .then(() => {
+            alert(JSON.stringify(data));
           })
-          .catch((err) => {
-            console.log(`Ошибка! ${err}`);
+          .then(() => {
             setIsLoading(false);
           });
+        // setIsLoading(true);
+        // alert(JSON.stringify(data));
+        // setIsLoading(false);
+        // sendData(data)
+        //   .then((res) => {
+        //     console.log(res);
+        //     setIsLoading(false);
+        //   })
+        //   .catch((err) => {
+        //     console.log(`Ошибка! ${err}`);
+        //     setIsLoading(false);
+        //   });
       }}
     >
       <ul className="form__inputs">
@@ -100,12 +115,12 @@ const Form = () => {
                   }
                 }}
                 onBlur={() => {
-                  if (carPriceInput < 1000000) {
-                    setCarPrice(1000000);
-                    setCarPriceInput(1000000);
-                  } else if (carPriceInput > 6000000) {
-                    setCarPrice(6000000);
-                    setCarPriceInput(6000000);
+                  if (carPriceInput < 1500000) {
+                    setCarPrice(1500000);
+                    setCarPriceInput(1500000);
+                  } else if (carPriceInput > 10000000) {
+                    setCarPrice(10000000);
+                    setCarPriceInput(10000000);
                   } else {
                     setCarPrice(carPriceInput);
                   }
@@ -116,8 +131,8 @@ const Form = () => {
             <input
               className="form__range"
               type="range"
-              min={1000000}
-              max={6000000}
+              min={1500000}
+              max={10000000}
               value={carPrice}
               disabled={isLoading}
               onChange={(e) => {
@@ -199,12 +214,12 @@ const Form = () => {
                   }
                 }}
                 onBlur={() => {
-                  if (monthsCountInput < 1) {
-                    setMonthsCount(1);
-                    setMonthsCountInput(1);
-                  } else if (monthsCountInput > 60) {
-                    setMonthsCount(60);
-                    setMonthsCountInput(60);
+                  if (monthsCountInput < 6) {
+                    setMonthsCount(6);
+                    setMonthsCountInput(6);
+                  } else if (monthsCountInput > 120) {
+                    setMonthsCount(120);
+                    setMonthsCountInput(120);
                   } else {
                     setMonthsCount(monthsCountInput);
                   }
@@ -215,8 +230,8 @@ const Form = () => {
             <input
               className="form__range"
               type="range"
-              min={1}
-              max={60}
+              min={6}
+              max={120}
               value={monthsCount}
               disabled={isLoading}
               onChange={(e) => {
