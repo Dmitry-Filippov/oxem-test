@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { sendData } from "../../api/api";
+// import { sendData } from "../../api/api";
 import "./Form.scss";
 
 const Form = () => {
